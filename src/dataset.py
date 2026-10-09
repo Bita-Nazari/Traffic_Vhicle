@@ -63,6 +63,13 @@ val_loader = DataLoader(
 )
 
 
+ood_loader = DataLoader(
+    ood_dataset,
+    batch_size=32,
+    shuffle=False
+)
+
+
 images,labels = next(iter(train_loader))
 
 print(images.shape)
